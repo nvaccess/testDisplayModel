@@ -64,6 +64,7 @@ void CmfcTestDlg::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CmfcTestDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
+	ON_WM_CTLCOLOR()
 	ON_WM_QUERYDRAGICON()
 END_MESSAGE_MAP()
 
@@ -143,6 +144,25 @@ void CmfcTestDlg::OnPaint()
 	else
 	{
 		CDialogEx::OnPaint();
+	}
+}
+
+HBRUSH CmfcTestDlg::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
+{
+	switch (nCtlColor)
+	{
+	case CTLCOLOR_STATIC:
+		if (pWnd->GetDlgCtrlID() == FG_COLOR_TEXT) {
+			pDC->SetTextColor(RGB(255, 0, 0));
+			return (HBRUSH)GetStockObject(NULL_BRUSH);
+		}
+		else if (pWnd->GetDlgCtrlID() == FGBG_COLOR_TEXT) {
+			pDC->SetTextColor(RGB(255, 0, 0));
+			pDC->SetBkColor(RGB(0, 255, 255));
+			return (HBRUSH)GetStockObject(NULL_BRUSH);
+		}
+	default:
+		return CDialog::OnCtlColor(pDC, pWnd, nCtlColor);
 	}
 }
 
