@@ -16,5 +16,19 @@ namespace GDItest
         {
             InitializeComponent();
         }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            TextFormatFlags flags = TextFormatFlags.Bottom | TextFormatFlags.EndEllipsis;
+            
+            System.Windows.Forms.TextRenderer.DrawText(
+                g, "hello world", this.Font,
+                new Rectangle(10, 10, 100, 50),
+                Color.FromArgb(255, 0, 0),
+                Color.FromArgb(100, 200, 200),
+                flags
+            );
+        }
     }
 }
