@@ -3,6 +3,7 @@
 
 #include "framework.h"
 #include "RawGDI.h"
+#include <string>
 
 #define MAX_LOADSTRING 100
 
@@ -111,6 +112,27 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    return TRUE;
 }
 
+void renderText(HDC& hdc) {
+    HFONT hFont, hOldFont;
+
+    // Retrieve a handle to the variable stock font.  
+    hFont = (HFONT)GetStockObject(ANSI_VAR_FONT);
+
+    // Select the variable stock font into the specified device context. 
+    if (hOldFont = (HFONT)SelectObject(hdc, hFont))
+    {
+        // Display the text string.
+        UINT fuOptions = 0;
+        std::wstring text(L"Sample ANSI_VAR_FONT text");
+        auto bkColor = GetBkColor(hdc);
+        SetBkColor(hdc, RGB(255, 100, 0));
+        ExtTextOut(hdc, 10, 50, fuOptions, nullptr, text.c_str(), text.length(), nullptr);
+        SetBkColor(hdc, bkColor);
+        // Restore the original font.
+        SelectObject(hdc, hOldFont);
+    }
+}
+
 //
 //  FUNCTION: WndProc(HWND, UINT, WPARAM, LPARAM)
 //
@@ -146,7 +168,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
-            // TODO: Add any drawing code that uses hdc here...
+            renderText(hdc);
             EndPaint(hWnd, &ps);
         }
         break;
