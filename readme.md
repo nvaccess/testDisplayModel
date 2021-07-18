@@ -12,7 +12,7 @@ In addition to the build requiremets for NVDA, also install:
 Or import from the 'dependencies.vsconfig'
 
 # Building
-Open mfcTest.sln with Visual Studio, and Build All
+Open TestDisplayModel.sln with Visual Studio, and Build All
 
 # GDItest
 A C# winforms application with a custom paint method.
