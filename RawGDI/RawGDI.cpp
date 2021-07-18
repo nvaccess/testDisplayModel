@@ -133,6 +133,10 @@ void renderText(HDC& hdc) {
     }
 }
 
+void doPaint(HDC& hdc) {
+    renderText(hdc);
+}
+
 //
 //  FUNCTION: WndProc(HWND, UINT, WPARAM, LPARAM)
 //
@@ -168,7 +172,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
-            renderText(hdc);
+            doPaint(hdc);
             EndPaint(hWnd, &ps);
         }
         break;
