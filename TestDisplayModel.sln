@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mfcTest", ".\mfcTest\mfcTest.vcxproj", "{E55F5673-C6BD-4D0F-8D18-6B4929DD506E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mfcTest", "mfcTest\mfcTest.vcxproj", "{E55F5673-C6BD-4D0F-8D18-6B4929DD506E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{803F855F-0D77-46B8-ADDD-29979417AACC}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,9 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\readme.md = ..\readme.md
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RawGDI", ".\RawGDI\RawGDI.vcxproj", "{33C4AB7C-5274-411D-A7B1-8F73ACC77385}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RawGDI", "RawGDI\RawGDI.vcxproj", "{33C4AB7C-5274-411D-A7B1-8F73ACC77385}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDItest", ".\GDItest\GDItest.csproj", "{8AC52CFB-4916-4772-B4FC-CF9DA94D9D81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GDItest", "GDItest\GDItest.csproj", "{8AC52CFB-4916-4772-B4FC-CF9DA94D9D81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,21 +26,25 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E55F5673-C6BD-4D0F-8D18-6B4929DD506E}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{E55F5673-C6BD-4D0F-8D18-6B4929DD506E}.Debug|Any CPU.Build.0 = Debug|Win32
 		{E55F5673-C6BD-4D0F-8D18-6B4929DD506E}.Debug|x64.ActiveCfg = Debug|x64
 		{E55F5673-C6BD-4D0F-8D18-6B4929DD506E}.Debug|x64.Build.0 = Debug|x64
 		{E55F5673-C6BD-4D0F-8D18-6B4929DD506E}.Debug|x86.ActiveCfg = Debug|Win32
 		{E55F5673-C6BD-4D0F-8D18-6B4929DD506E}.Debug|x86.Build.0 = Debug|Win32
 		{E55F5673-C6BD-4D0F-8D18-6B4929DD506E}.Release|Any CPU.ActiveCfg = Release|Win32
+		{E55F5673-C6BD-4D0F-8D18-6B4929DD506E}.Release|Any CPU.Build.0 = Release|Win32
 		{E55F5673-C6BD-4D0F-8D18-6B4929DD506E}.Release|x64.ActiveCfg = Release|x64
 		{E55F5673-C6BD-4D0F-8D18-6B4929DD506E}.Release|x64.Build.0 = Release|x64
 		{E55F5673-C6BD-4D0F-8D18-6B4929DD506E}.Release|x86.ActiveCfg = Release|Win32
 		{E55F5673-C6BD-4D0F-8D18-6B4929DD506E}.Release|x86.Build.0 = Release|Win32
 		{33C4AB7C-5274-411D-A7B1-8F73ACC77385}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{33C4AB7C-5274-411D-A7B1-8F73ACC77385}.Debug|Any CPU.Build.0 = Debug|Win32
 		{33C4AB7C-5274-411D-A7B1-8F73ACC77385}.Debug|x64.ActiveCfg = Debug|x64
 		{33C4AB7C-5274-411D-A7B1-8F73ACC77385}.Debug|x64.Build.0 = Debug|x64
 		{33C4AB7C-5274-411D-A7B1-8F73ACC77385}.Debug|x86.ActiveCfg = Debug|Win32
 		{33C4AB7C-5274-411D-A7B1-8F73ACC77385}.Debug|x86.Build.0 = Debug|Win32
 		{33C4AB7C-5274-411D-A7B1-8F73ACC77385}.Release|Any CPU.ActiveCfg = Release|Win32
+		{33C4AB7C-5274-411D-A7B1-8F73ACC77385}.Release|Any CPU.Build.0 = Release|Win32
 		{33C4AB7C-5274-411D-A7B1-8F73ACC77385}.Release|x64.ActiveCfg = Release|x64
 		{33C4AB7C-5274-411D-A7B1-8F73ACC77385}.Release|x64.Build.0 = Release|x64
 		{33C4AB7C-5274-411D-A7B1-8F73ACC77385}.Release|x86.ActiveCfg = Release|Win32
