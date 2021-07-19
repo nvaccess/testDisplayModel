@@ -126,7 +126,8 @@ void renderText(HDC& hdc) {
         std::wstring text(L"Sample ANSI_VAR_FONT text");
         auto bkColor = GetBkColor(hdc);
         SetBkColor(hdc, RGB(255, 100, 0));
-        ExtTextOut(hdc, 10, 50, fuOptions, nullptr, text.c_str(), text.length(), nullptr);
+        const UINT charCount = static_cast<UINT>(text.length());
+        ExtTextOut(hdc, 10, 50, fuOptions, nullptr, text.c_str(), charCount, nullptr);
         SetBkColor(hdc, bkColor);
         // Restore the original font.
         SelectObject(hdc, hOldFont);
