@@ -1,8 +1,8 @@
 A repository for testing display model code in NVDA.
 It contains several projects to build applications based on historically popular GUI APIs.
-- MFC app.
-- WinForms with Custom GDI code.
-- A win32 desktop app, with GDI code.
+- mfcTest: an MFC app.
+- GDItest: WinForms with Custom GDI code.
+- RawGDI: A win32 desktop app, with GDI code.
 
 # Build requirements
 In addition to the build requiremets for NVDA, also install:
